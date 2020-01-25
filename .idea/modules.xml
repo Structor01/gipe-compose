@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/gipe-compose.iml" filepath="$PROJECT_DIR$/.idea/gipe-compose.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../virtus-compose/.idea/virtus-compose.iml" filepath="$PROJECT_DIR$/../virtus-compose/.idea/virtus-compose.iml" />
+    </modules>
+  </component>
+</project>
