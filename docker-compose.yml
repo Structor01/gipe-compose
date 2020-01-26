@@ -1,0 +1,18 @@
+version: "3"
+services:
+  painel:
+    image: structor01/gipe
+    ports:
+      - "80:80"
+  integra:
+    image: mongo
+    volumes:
+      - ./data/integra:/data/db
+    ports:
+      - "27018:27017"
+  db:
+    image: mongo
+    volumes:
+      - ./data/db:/data/db
+    ports:
+      - "27019:27017"
