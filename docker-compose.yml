@@ -1,5 +1,9 @@
 version: "3"
 services:
+  rpa:
+    image: structor01/rpa-gipe
+    ports:
+      - "8080:5000"
   painel:
     image: structor01/gipe
     ports:
