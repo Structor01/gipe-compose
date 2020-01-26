@@ -4,6 +4,8 @@ services:
     image: structor01/gipe-rpa
     ports:
       - "8080:5000"
+    links:
+      - integra
   painel:
     image: structor01/gipe
     ports:
