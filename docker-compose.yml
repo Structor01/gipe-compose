@@ -6,12 +6,14 @@ services:
       - "80:80"
   integra:
     image: mongo
+    restart: always
     volumes:
       - ./data/integra:/data/db
     ports:
       - "27018:27017"
   db:
     image: mongo
+    restart: always
     volumes:
       - ./data/db:/data/db
     ports:
