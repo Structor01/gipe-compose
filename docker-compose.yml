@@ -18,7 +18,7 @@ services:
       - MONGO_INITDB_ROOT_PASSWORD=akVLmBfN7GHhacDC
     volumes:
       - ./data/integra:/data/db
-      - "./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d/"
+      - "/docker-entrypoint-initdb.d/:/docker-entrypoint-initdb.d/"
     ports:
       - "27018:27017"
   db:
