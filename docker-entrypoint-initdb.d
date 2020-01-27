@@ -2,10 +2,10 @@
 
 echo 'Creating application user and db'
 
-mongo INTEGRA \
+mongo ${APP_MONGO_DB} \
         --host localhost \
-        --port 27017 \
-        -u root \
-        -p akVLmBfN7GHhacDC \
+        --port ${MONGO_PORT} \
+        -u ${MONGO_ROOT_USER} \
+        -p ${MONGO_ROOT_PASS} \
         --authenticationDatabase admin \
-        --eval "db.createUser({user: 'gipe', pwd: '280800Artfbgyn', roles:[{role:'dbOwner', db: 'INTEGRA'}]});"
+        --eval "db.createUser({user: '${APP_MONGO_USER}', pwd: '${APP_MONGO_PASS}', roles:[{role:'dbOwner', db: '${APP_MONGO_DB}'}]});"
