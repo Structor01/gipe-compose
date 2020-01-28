@@ -6,10 +6,10 @@ services:
       - "8080:5000"
     links:
       - integra
-  painel:
-    image: structor01/gipe
-    ports:
-      - "80:80"
+#  painel:
+#    image: structor01/gipe
+#    ports:
+#      - "80:80"
   integra:
     image: mongo
     restart: always
