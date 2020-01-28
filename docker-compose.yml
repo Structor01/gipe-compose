@@ -28,10 +28,10 @@ services:
 #      - "/docker-entrypoint-initdb.d/:/docker-entrypoint-initdb.d/"
     ports:
       - "27018:27017"
-  db:
-    image: mongo
-    restart: always
-    volumes:
-      - ./data/db:/data/db
-    ports:
-      - "27019:27017"
+#  db:
+#    image: mongo
+#    restart: always
+#    volumes:
+#      - ./data/db:/data/db
+#    ports:
+#      - "27019:27017"
