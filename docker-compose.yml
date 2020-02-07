@@ -9,12 +9,14 @@ services:
       - integra
   cmv:
     image: structor01/gipe-cmv
+    ports:
+      - "3333:3333"
     links:
       - integra
-  lc:
-    image: structor01/gipe-lc
-    links:
-      - integra
+#  lc:
+#    image: structor01/gipe-lc
+#    links:
+#      - integra
 #  painel:
 #    image: structor01/gipe
 #    ports:
@@ -37,6 +39,10 @@ services:
 #      - "/docker-entrypoint-initdb.d/:/docker-entrypoint-initdb.d/"
     ports:
       - "27018:27017"
+  redis:
+    image: 'redis:latest'
+    ports:
+      - "6379:6379"
 #  db:
 #    image: mongo
 #    restart: always
