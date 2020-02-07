@@ -7,6 +7,14 @@ services:
       - "8080:5000"
     links:
       - integra
+  cmv:
+    image: structor01/gipe-cmv
+    links:
+      - integra
+  lc:
+    image: structor01/gipe-lc
+    links:
+      - integra
 #  painel:
 #    image: structor01/gipe
 #    ports:
