@@ -7,14 +7,20 @@ services:
       - "8080:5000"
     links:
       - integra
-  cmv:
-    image: structor01/gipe-cmv
-    ports:
-      - "3333:3333"
+#  cmv:
+#    image: structor01/gipe-cmv
+#    ports:
+#      - "3333:3333"
+#    links:
+#      - integra
+  siege:
+    image: structor01/gipe-siege
     links:
       - integra
-#  lc:
-#    image: structor01/gipe-lc
+    ports:
+      - "3000:3333"
+#  lucrobruto:
+#    image: structor01/gipe-lucrobruto
 #    links:
 #      - integra
 #  painel:
@@ -43,10 +49,10 @@ services:
     image: 'redis:latest'
     ports:
       - "6379:6379"
-#  db:
-#    image: mongo
-#    restart: always
-#    volumes:
-#      - ./data/db:/data/db
-#    ports:
-#      - "27019:27017"
+  db:
+    image: mongo
+    restart: always
+    volumes:
+      - ./client/db:/data/db
+    ports:
+      - "27019:27017"
