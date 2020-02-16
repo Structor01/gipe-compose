@@ -1,12 +1,12 @@
 version: "3"
 services:
-  rpa:
-    image: structor01/gipe-rpa
-    restart: always
-    ports:
-      - "8080:5000"
-    links:
-      - integra
+#  rpa:
+#    image: structor01/gipe-rpa
+#    restart: always
+#    ports:
+#      - "8080:5000"
+#    links:
+#      - integra
 #  cmv:
 #    image: structor01/gipe-cmv
 #    ports:
