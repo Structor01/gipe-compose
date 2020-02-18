@@ -19,6 +19,12 @@ services:
       - integra
     ports:
       - "3000:3333"
+  vendas:
+    image: structor01/gipe-vendas
+    links:
+      - db
+    ports:
+      - "3001:3333"
 #  lucrobruto:
 #    image: structor01/gipe-lucrobruto
 #    links:
