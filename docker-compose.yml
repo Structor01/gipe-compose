@@ -14,7 +14,7 @@ services:
 #    links:
 #      - integra
   client:
-    image: structor01/gipe-client
+    image: structor01/gipe-web
     links:
       - db
       - financeiro
