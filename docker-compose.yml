@@ -14,11 +14,11 @@ services:
 #    links:
 #      - integra
   client:
-          image: structor01/gipe-client
-          links:
-            - db
-            - financeiro
-            - vendas
+    image: structor01/gipe-client
+    links:
+      - db
+      - financeiro
+      - vendas
     ports:
       - "80:80"
   siege:
