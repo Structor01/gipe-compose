@@ -13,6 +13,14 @@ services:
 #      - "3333:3333"
 #    links:
 #      - integra
+  client:
+          image: structor01/gipe-client
+          links:
+            - db
+            - financeiro
+            - vendas
+    ports:
+      - "80:80"
   siege:
     image: structor01/gipe-siege
     links:
@@ -25,6 +33,12 @@ services:
       - db
     ports:
       - "3001:3333"
+  financeiro:
+    image: structor01/gipe-financeiro
+    links:
+      - db
+    ports:
+      - "3002:3333"
 #  lucrobruto:
 #    image: structor01/gipe-lucrobruto
 #    links:

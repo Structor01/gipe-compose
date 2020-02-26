@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert
+    kompose.version: 1.20.0 ()
+  creationTimestamp: null
+  labels:
+    io.kompose.service: financeiro
+  name: financeiro
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert
+        kompose.version: 1.20.0 ()
+      creationTimestamp: null
+      labels:
+        io.kompose.service: financeiro
+    spec:
+      containers:
+      - image: structor01/gipe-financeiro
+        name: financeiro
+        ports:
+        - containerPort: 3333
+        resources: {}
+      restartPolicy: Always
+status: {}
