@@ -13,6 +13,10 @@ services:
 #      - "3333:3333"
 #    links:
 #      - integra
+  api:
+    image: structor01/gipe-api
+    ports:
+      - "8080:5000"
   client:
     image: structor01/gipe-web
     links:
